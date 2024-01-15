@@ -14,23 +14,26 @@ struct InvestFullScreenCover: View {
     
     var body: some View {
         VStack(spacing: 16) {
-            HStack {
-                navigateBackBtn
-                Spacer()
-                Button("Dismiss") { dismiss() }
-                    .padding(.trailing, 6)
-            }
-            .overlay {
-                Text(vm.customer.name)
-                    .fontWeight(.semibold)
-            }
+            topVw
             detailsVw
-            Button("Navigate to root", action: router.navigateToRoot)
-                .buttonStyle(.borderedProminent)
+            navigateToRootBtn
             Spacer()
         }
         .padding(.horizontal, 10)
         .padding(.vertical, 12)
+    }
+    
+    private var topVw: some View {
+        HStack {
+            navigateBackBtn
+            Spacer()
+            Button("Dismiss") { dismiss() }
+                .padding(.trailing, 6)
+        }
+        .overlay {
+            Text(vm.customer.name)
+                .fontWeight(.semibold)
+        }
     }
     
     private var navigateBackBtn: some View {
@@ -46,6 +49,11 @@ struct InvestFullScreenCover: View {
                 Spacer()
             }
         }
+    }
+    
+    private var navigateToRootBtn: some View {
+        Button("Navigate to root", action: router.navigateToRoot)
+            .buttonStyle(.borderedProminent)
     }
     
     private var detailsVw: some View {

@@ -15,7 +15,7 @@ final class Router: ObservableObject {
     }
     
     func navigateToRoot() {
-        path.removeLast(path.count)
+        path = NavigationPath()
     }
     
     func configRoute(to destinations: [any Hashable], refreshPath: Bool = false) {

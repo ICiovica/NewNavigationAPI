@@ -17,13 +17,13 @@ struct InvestDetailView: View {
             .buttonStyle(.borderedProminent)
             .navigationTitle("User details")
             .navigationBarTitleDisplayMode(.inline)
-            .fullScreenCover(isPresented: $isPresented) {
-                InvestFullScreenCover()
-            }
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button("Dismiss", action: router.navigateToRoot)
                 }
+            }
+            .fullScreenCover(isPresented: $isPresented) {
+                InvestFullScreenCover()
             }
     }
 }

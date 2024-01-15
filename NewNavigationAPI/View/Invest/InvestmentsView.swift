@@ -15,11 +15,12 @@ struct InvestmentsView: View {
     var body: some View {
         VStack(spacing: 16) {
             Text("Total investments: \(amount.description)")
-            NavigationLink("Go to **\(name)** details", value: name)
-                .buttonStyle(.borderedProminent)
-            Button("Contribute Now", action: action)
-                .buttonStyle(.borderedProminent)
-
+            Group {
+                NavigationLink("Go to **\(name)** details", value: name)
+                Button("Contribute Now", action: action)
+            }
+            .buttonStyle(.borderedProminent)
+            
         }
         .navigationTitle("Investment Funds")
         .navigationBarTitleDisplayMode(.inline)
