@@ -8,17 +8,20 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject private var router = Router()
+    @StateObject private var vm = CustomerViewModel()
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack(path: $router.path) {
+            FinanceView()
         }
-        .padding()
+        .environmentObject(router)
+        .environmentObject(vm)
     }
 }
 
 #Preview {
     ContentView()
+        .environmentObject(Router())
+        .environmentObject(CustomerViewModel())
 }
