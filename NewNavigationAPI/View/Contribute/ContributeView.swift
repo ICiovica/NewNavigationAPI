@@ -17,7 +17,7 @@ struct ContributionsView: View {
             Button("Invest Now", action: action)
                 .buttonStyle(.borderedProminent)
         }
-        .navigationTitle("Pension Contribution")
+        .navigationTitle("Contributions")
         .navigationBarTitleDisplayMode(.inline)
     }
 }

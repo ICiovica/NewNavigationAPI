@@ -7,8 +7,7 @@
 
 import Foundation
 
-struct CustomerModel: Identifiable, Hashable {
-    let id = UUID()
+struct CustomerModel: Hashable {
     let name = "Ionut Ciovica"
     let age = 38
     let investments = InvestmentsModel()

@@ -13,11 +13,8 @@ struct FinanceView: View {
     
     var body: some View {
         VStack(spacing: 16) {
-            Group {
-                NavigationLink("Contribute Now", value: vm.customer.contributions)
-                NavigationLink("Invest Now", value: vm.customer.investments)
-            }
-            .buttonStyle(.borderedProminent)
+            NavigationLink("Contribute Now", value: vm.customer.contributions)
+            NavigationLink("Invest Now", value: vm.customer.investments)
             Button("Go To **\(vm.customer.name)** Details") { router.configRoute(to: [vm.customer.investments, vm.customer.name]) }
                 .buttonStyle(.borderedProminent)
         }

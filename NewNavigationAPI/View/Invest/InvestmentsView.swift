@@ -15,17 +15,14 @@ struct InvestmentsView: View {
     var body: some View {
         VStack(spacing: 16) {
             Text("Total investments: \(amount.description)")
-            Group {
-                NavigationLink("Go to **\(name)** details", value: name)
-                Button("Contribute Now", action: action)
-            }
-            .buttonStyle(.borderedProminent)
-            
+            NavigationLink("Go to **\(name)** details", value: name)
+            Button("Contribute Now", action: action)
+                .buttonStyle(.borderedProminent)
         }
-        .navigationTitle("Investment Funds")
+        .navigationTitle("Investments")
         .navigationBarTitleDisplayMode(.inline)
-        .navigationDestination(for: String.self) { name in
-            InvestDetailView(name: name)
+        .navigationDestination(for: String.self) { value in
+            InvestDetailView(name: value)
         }
     }
 }
