@@ -1,5 +1,5 @@
 //
-//  ContributionsView.swift
+//  InvestmentsView.swift
 //  NewNavigationAPI
 //
 //  Created by IonutCiovica on 14/01/2024.
@@ -7,38 +7,37 @@
 
 import SwiftUI
 
-struct ContributionsView: View {
+struct InvestmentsView: View {
     @EnvironmentObject private var router: Router
     @EnvironmentObject private var vm: CustomerViewModel
     
     var body: some View {
         List {
             Section {
-                Button("Contribute Now") { router.navigate(to: .purchase(.contribute)) }
+                Button("Invest Now") { router.navigate(to: .purchase(.invest)) }
             } header: {
-                Text("Total contributions: \(vm.customer.contributions)")
+                Text("Total investments: \(vm.customer.investments)")
             }
             
             Section {
-                Button("Investments") { router.navigate(to: .investments, refreshPath: true) }
+                Button("Contributions") {  router.navigate(to: .contributions, refreshPath: true) }
             } header: {
                 Text("Accounts")
             }
             
             Section {
-                Button(vm.customer.name) { router.navigate(to: .accountDetails(vm.customer.name)) }
+                Button("Account Name") { router.navigate(to: .accountDetails) }
             } header: {
-                Text("Details")
+                Text("Settings")
             }
-            
         }
-        .navigationTitle("Contributions")
+        .navigationTitle("Investments")
         .navigationBarTitleDisplayMode(.inline)
     }
 }
 
 #Preview {
-    ContributionsView()
+    InvestmentsView()
         .environmentObject(Router())
         .environmentObject(CustomerViewModel())
 }

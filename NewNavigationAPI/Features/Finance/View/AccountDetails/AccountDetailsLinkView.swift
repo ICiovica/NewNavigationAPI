@@ -14,18 +14,12 @@ struct AccountDetailsLinkView: View {
     
     var body: some View {
         List {
-            Button("\(name) Account Details") { isPresented.toggle() }
+            Button(name) { isPresented.toggle() }
         }
-        .navigationTitle("User details")
+        .navigationTitle("Account Details")
         .navigationBarTitleDisplayMode(.inline)
         .fullScreenCover(isPresented: $isPresented) {
             AccountDetailsView()
-        }
-        .toolbar {
-            ToolbarItem(placement: .topBarTrailing) {
-                Button("Dismiss", action: action)
-                    .fontWeight(.regular)
-            }
         }
     }
 }

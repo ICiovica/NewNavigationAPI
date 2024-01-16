@@ -11,9 +11,11 @@
 		AC41C88D2B552C82005E608F /* AccountDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC41C88C2B552C82005E608F /* AccountDetailsView.swift */; };
 		AC41C8902B5542BD005E608F /* CustomerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC41C88F2B5542BD005E608F /* CustomerViewModel.swift */; };
 		AC41C8922B5542E7005E608F /* CustomerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC41C8912B5542E7005E608F /* CustomerModel.swift */; };
+		AC4AB3222B570A5400BB61B8 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4AB3212B570A5400BB61B8 /* DashboardView.swift */; };
+		AC4AB3242B57137000BB61B8 /* FinanceEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4AB3232B57137000BB61B8 /* FinanceEntryView.swift */; };
 		ACC57EB32B56962A00D88B4B /* PurchaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC57EB22B56962A00D88B4B /* PurchaseView.swift */; };
 		ACCFBC432B542E1600FEDFB9 /* NewNavigationAPIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCFBC422B542E1600FEDFB9 /* NewNavigationAPIApp.swift */; };
-		ACCFBC452B542E1600FEDFB9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCFBC442B542E1600FEDFB9 /* ContentView.swift */; };
+		ACCFBC452B542E1600FEDFB9 /* TabsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCFBC442B542E1600FEDFB9 /* TabsView.swift */; };
 		ACCFBC472B542E1A00FEDFB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACCFBC462B542E1A00FEDFB9 /* Assets.xcassets */; };
 		ACCFBC4A2B542E1A00FEDFB9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACCFBC492B542E1A00FEDFB9 /* Preview Assets.xcassets */; };
 		ACCFBC512B542F8800FEDFB9 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCFBC502B542F8800FEDFB9 /* Router.swift */; };
@@ -27,10 +29,12 @@
 		AC41C88C2B552C82005E608F /* AccountDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDetailsView.swift; sourceTree = "<group>"; };
 		AC41C88F2B5542BD005E608F /* CustomerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerViewModel.swift; sourceTree = "<group>"; };
 		AC41C8912B5542E7005E608F /* CustomerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerModel.swift; sourceTree = "<group>"; };
+		AC4AB3212B570A5400BB61B8 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		AC4AB3232B57137000BB61B8 /* FinanceEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceEntryView.swift; sourceTree = "<group>"; };
 		ACC57EB22B56962A00D88B4B /* PurchaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseView.swift; sourceTree = "<group>"; };
 		ACCFBC3F2B542E1600FEDFB9 /* NewNavigationAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewNavigationAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACCFBC422B542E1600FEDFB9 /* NewNavigationAPIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewNavigationAPIApp.swift; sourceTree = "<group>"; };
-		ACCFBC442B542E1600FEDFB9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		ACCFBC442B542E1600FEDFB9 /* TabsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsView.swift; sourceTree = "<group>"; };
 		ACCFBC462B542E1A00FEDFB9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ACCFBC492B542E1A00FEDFB9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		ACCFBC502B542F8800FEDFB9 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
@@ -61,20 +65,14 @@
 		AC41C8822B552539005E608F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AC4AB3232B57137000BB61B8 /* FinanceEntryView.swift */,
+				ACCFBC562B543D3600FEDFB9 /* FinanceView.swift */,
 				AC4AB3182B56BB4000BB61B8 /* AccountDetails */,
 				ACC57EB62B56996400D88B4B /* Purchase */,
 				AC41C8892B552907005E608F /* Contributions */,
 				AC41C8882B552901005E608F /* Investments */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		AC41C8832B552555005E608F /* Navigation */ = {
-			isa = PBXGroup;
-			children = (
-				ACCFBC502B542F8800FEDFB9 /* Router.swift */,
-			);
-			path = Navigation;
 			sourceTree = "<group>";
 		};
 		AC41C8882B552901005E608F /* Investments */ = {
@@ -110,6 +108,50 @@
 			path = AccountDetails;
 			sourceTree = "<group>";
 		};
+		AC4AB3192B57036E00BB61B8 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				AC4AB31C2B570A0F00BB61B8 /* Dashboard */,
+				AC4AB31A2B57037600BB61B8 /* Finance */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		AC4AB31A2B57037600BB61B8 /* Finance */ = {
+			isa = PBXGroup;
+			children = (
+				AC41C8812B552534005E608F /* Model */,
+				AC41C8822B552539005E608F /* View */,
+				AC41C88E2B554296005E608F /* ViewModel */,
+				AC4AB31B2B57096400BB61B8 /* Navigation */,
+			);
+			path = Finance;
+			sourceTree = "<group>";
+		};
+		AC4AB31B2B57096400BB61B8 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				ACCFBC502B542F8800FEDFB9 /* Router.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		AC4AB31C2B570A0F00BB61B8 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				AC4AB31E2B570A3200BB61B8 /* View */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		AC4AB31E2B570A3200BB61B8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AC4AB3212B570A5400BB61B8 /* DashboardView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		ACC57EB62B56996400D88B4B /* Purchase */ = {
 			isa = PBXGroup;
 			children = (
@@ -138,12 +180,8 @@
 			isa = PBXGroup;
 			children = (
 				ACCFBC422B542E1600FEDFB9 /* NewNavigationAPIApp.swift */,
-				ACCFBC442B542E1600FEDFB9 /* ContentView.swift */,
-				ACCFBC562B543D3600FEDFB9 /* FinanceView.swift */,
-				AC41C8812B552534005E608F /* Model */,
-				AC41C8822B552539005E608F /* View */,
-				AC41C88E2B554296005E608F /* ViewModel */,
-				AC41C8832B552555005E608F /* Navigation */,
+				ACCFBC442B542E1600FEDFB9 /* TabsView.swift */,
+				AC4AB3192B57036E00BB61B8 /* Features */,
 				ACCFBC462B542E1A00FEDFB9 /* Assets.xcassets */,
 				ACCFBC482B542E1A00FEDFB9 /* Preview Content */,
 			);
@@ -229,9 +267,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC41C88B2B5529BA005E608F /* AccountDetailsLinkView.swift in Sources */,
+				AC4AB3222B570A5400BB61B8 /* DashboardView.swift in Sources */,
 				AC41C8922B5542E7005E608F /* CustomerModel.swift in Sources */,
+				AC4AB3242B57137000BB61B8 /* FinanceEntryView.swift in Sources */,
 				AC41C88D2B552C82005E608F /* AccountDetailsView.swift in Sources */,
-				ACCFBC452B542E1600FEDFB9 /* ContentView.swift in Sources */,
+				ACCFBC452B542E1600FEDFB9 /* TabsView.swift in Sources */,
 				ACCFBC572B543D3600FEDFB9 /* FinanceView.swift in Sources */,
 				ACC57EB32B56962A00D88B4B /* PurchaseView.swift in Sources */,
 				ACCFBC552B543D1600FEDFB9 /* ContributionsView.swift in Sources */,

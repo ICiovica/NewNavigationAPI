@@ -18,7 +18,7 @@ final class Router: ObservableObject {
     enum Destination: Hashable {
         case investments
         case contributions
-        case accountDetails(String)
+        case accountDetails
         case purchase(PurchaseType)
     }
     

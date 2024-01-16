@@ -10,7 +10,7 @@ import Foundation
 final class CustomerViewModel: ObservableObject {
     @Published private(set) var customer = CustomerModel()
     
-    func purchased(of type: PurchaseType, amount: Int) {
+    func purchase(of type: PurchaseType, with amount: Int) {
         switch type {
         case .invest:
             customer.investments += amount
