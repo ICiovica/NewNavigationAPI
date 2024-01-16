@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AC41C88B2B5529BA005E608F /* InvestDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC41C88A2B5529BA005E608F /* InvestDetailView.swift */; };
-		AC41C88D2B552C82005E608F /* InvestFullScreenCover.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC41C88C2B552C82005E608F /* InvestFullScreenCover.swift */; };
+		AC41C88B2B5529BA005E608F /* AccountDetailsLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC41C88A2B5529BA005E608F /* AccountDetailsLinkView.swift */; };
+		AC41C88D2B552C82005E608F /* AccountDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC41C88C2B552C82005E608F /* AccountDetailsView.swift */; };
 		AC41C8902B5542BD005E608F /* CustomerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC41C88F2B5542BD005E608F /* CustomerViewModel.swift */; };
 		AC41C8922B5542E7005E608F /* CustomerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC41C8912B5542E7005E608F /* CustomerModel.swift */; };
 		ACC57EB32B56962A00D88B4B /* PurchaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC57EB22B56962A00D88B4B /* PurchaseView.swift */; };
@@ -23,8 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		AC41C88A2B5529BA005E608F /* InvestDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestDetailView.swift; sourceTree = "<group>"; };
-		AC41C88C2B552C82005E608F /* InvestFullScreenCover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestFullScreenCover.swift; sourceTree = "<group>"; };
+		AC41C88A2B5529BA005E608F /* AccountDetailsLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDetailsLinkView.swift; sourceTree = "<group>"; };
+		AC41C88C2B552C82005E608F /* AccountDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDetailsView.swift; sourceTree = "<group>"; };
 		AC41C88F2B5542BD005E608F /* CustomerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerViewModel.swift; sourceTree = "<group>"; };
 		AC41C8912B5542E7005E608F /* CustomerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerModel.swift; sourceTree = "<group>"; };
 		ACC57EB22B56962A00D88B4B /* PurchaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseView.swift; sourceTree = "<group>"; };
@@ -61,6 +61,7 @@
 		AC41C8822B552539005E608F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AC4AB3182B56BB4000BB61B8 /* AccountDetails */,
 				ACC57EB62B56996400D88B4B /* Purchase */,
 				AC41C8892B552907005E608F /* Contributions */,
 				AC41C8882B552901005E608F /* Investments */,
@@ -80,8 +81,6 @@
 			isa = PBXGroup;
 			children = (
 				ACCFBC522B543D0700FEDFB9 /* InvestmentsView.swift */,
-				AC41C88C2B552C82005E608F /* InvestFullScreenCover.swift */,
-				AC41C88A2B5529BA005E608F /* InvestDetailView.swift */,
 			);
 			path = Investments;
 			sourceTree = "<group>";
@@ -100,6 +99,15 @@
 				AC41C88F2B5542BD005E608F /* CustomerViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		AC4AB3182B56BB4000BB61B8 /* AccountDetails */ = {
+			isa = PBXGroup;
+			children = (
+				AC41C88C2B552C82005E608F /* AccountDetailsView.swift */,
+				AC41C88A2B5529BA005E608F /* AccountDetailsLinkView.swift */,
+			);
+			path = AccountDetails;
 			sourceTree = "<group>";
 		};
 		ACC57EB62B56996400D88B4B /* Purchase */ = {
@@ -220,9 +228,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC41C88B2B5529BA005E608F /* InvestDetailView.swift in Sources */,
+				AC41C88B2B5529BA005E608F /* AccountDetailsLinkView.swift in Sources */,
 				AC41C8922B5542E7005E608F /* CustomerModel.swift in Sources */,
-				AC41C88D2B552C82005E608F /* InvestFullScreenCover.swift in Sources */,
+				AC41C88D2B552C82005E608F /* AccountDetailsView.swift in Sources */,
 				ACCFBC452B542E1600FEDFB9 /* ContentView.swift in Sources */,
 				ACCFBC572B543D3600FEDFB9 /* FinanceView.swift in Sources */,
 				ACC57EB32B56962A00D88B4B /* PurchaseView.swift in Sources */,

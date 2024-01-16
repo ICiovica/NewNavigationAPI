@@ -7,6 +7,11 @@
 
 import SwiftUI
 
+enum PurchaseType {
+    case invest
+    case contribute
+}
+
 final class Router: ObservableObject {
     @Published var path: [Destination] = []
     

@@ -1,5 +1,5 @@
 //
-//  InvestFullScreenCover.swift
+//  AccountDetailsView.swift
 //  NewNavigationAPI
 //
 //  Created by IonutCiovica on 15/01/2024.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct InvestFullScreenCover: View {
+struct AccountDetailsView: View {
     @Environment(\.dismiss) var dismiss
     @EnvironmentObject private var router: Router
     @EnvironmentObject private var vm: CustomerViewModel
@@ -64,7 +64,7 @@ struct InvestFullScreenCover: View {
 }
 
 #Preview {
-    InvestFullScreenCover()
+    AccountDetailsView()
         .environmentObject(Router())
         .environmentObject(CustomerViewModel())
 }

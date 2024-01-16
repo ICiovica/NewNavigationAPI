@@ -1,5 +1,5 @@
 //
-//  InvestDetailView.swift
+//  AccountDetailsLinkView.swift
 //  NewNavigationAPI
 //
 //  Created by IonutCiovica on 15/01/2024.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct InvestDetailView: View {
+struct AccountDetailsLinkView: View {
     @State private var isPresented = false
     let name: String
     let action: () -> Void
@@ -19,7 +19,7 @@ struct InvestDetailView: View {
         .navigationTitle("User details")
         .navigationBarTitleDisplayMode(.inline)
         .fullScreenCover(isPresented: $isPresented) {
-            InvestFullScreenCover()
+            AccountDetailsView()
         }
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
@@ -31,5 +31,5 @@ struct InvestDetailView: View {
 }
 
 #Preview {
-    InvestDetailView(name: "John") {}
+    AccountDetailsLinkView(name: "John") {}
 }

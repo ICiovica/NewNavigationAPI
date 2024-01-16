@@ -35,7 +35,7 @@ struct FinanceView: View {
             case .investments:
                 InvestmentsView()
             case .accountDetails(let name):
-                InvestDetailView(name: name) {
+                AccountDetailsLinkView(name: name) {
                     router.navigateToRoot()
                 }
             case .purchase(let type):

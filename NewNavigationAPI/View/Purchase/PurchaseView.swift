@@ -7,11 +7,6 @@
 
 import SwiftUI
 
-enum PurchaseType {
-    case invest
-    case contribute
-}
-
 struct PurchaseView: View {
     @State private var amount: Int = 0
     
