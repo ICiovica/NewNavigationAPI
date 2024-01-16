@@ -15,9 +15,10 @@ struct InvestFullScreenCover: View {
     var body: some View {
         VStack(spacing: 16) {
             topVw
-            detailsVw
-            navigateToRootBtn
-            Spacer()
+            List {
+                detailsVw
+                Button("Financial Planning", action: router.navigateToRoot)
+            }
         }
         .padding(.horizontal, 10)
         .padding(.vertical, 12)
@@ -30,6 +31,7 @@ struct InvestFullScreenCover: View {
             Button("Dismiss") { dismiss() }
                 .padding(.trailing, 6)
         }
+        .fontWeight(.regular)
         .overlay {
             Text(vm.customer.name)
                 .fontWeight(.semibold)
@@ -51,13 +53,8 @@ struct InvestFullScreenCover: View {
         }
     }
     
-    private var navigateToRootBtn: some View {
-        Button("Navigate to root", action: router.navigateToRoot)
-            .buttonStyle(.borderedProminent)
-    }
-    
     private var detailsVw: some View {
-        VStack(alignment: .leading, spacing: 16) {
+        VStack(alignment: .leading, spacing: 12) {
             Text("Name: \(vm.customer.name)")
             Text("Age: \(vm.customer.age)")
             Text("Investments: \(vm.customer.investments.amount.description)")

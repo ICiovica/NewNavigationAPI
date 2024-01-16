@@ -8,26 +8,26 @@
 import SwiftUI
 
 struct InvestmentsView: View {
-    let amount: Int
-    let name: String
-    let action: () -> Void
+    @EnvironmentObject private var router: Router
+    @EnvironmentObject private var vm: CustomerViewModel
     
     var body: some View {
-        VStack(spacing: 16) {
-            Text("Total investments: \(amount.description)")
-            NavigationLink("Go to **\(name)** details", value: name)
-            Button("Contribute Now", action: action)
-                .buttonStyle(.borderedProminent)
+        List {
+            Section {
+                Button("Contributions") {  router.navigate(to: .contributions, refreshPath: true) }
+            } header: {
+                Text("Total investments: \(vm.customer.investments.amount.description)")
+            }
+            
+            Button("\(vm.customer.name) Account") { router.navigate(to: .investDetail(vm.customer.name)) }
         }
         .navigationTitle("Investments")
         .navigationBarTitleDisplayMode(.inline)
-        .navigationDestination(for: String.self) { value in
-            InvestDetailView(name: value)
-        }
     }
 }
 
 #Preview {
-    InvestmentsView(amount: 0, name: .init()) {}
+    InvestmentsView()
         .environmentObject(Router())
+        .environmentObject(CustomerViewModel())
 }

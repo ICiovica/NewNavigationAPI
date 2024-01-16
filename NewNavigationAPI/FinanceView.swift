@@ -12,22 +12,21 @@ struct FinanceView: View {
     @EnvironmentObject private var vm: CustomerViewModel
     
     var body: some View {
-        VStack(spacing: 16) {
-            NavigationLink("Contribute Now", value: vm.customer.contributions)
-            NavigationLink("Invest Now", value: vm.customer.investments)
-            Button("Go To **\(vm.customer.name)** Details") { router.configRoute(to: [vm.customer.investments, vm.customer.name]) }
-                .buttonStyle(.borderedProminent)
+        List {
+            Button("Contributions") { router.navigate(to: .contributions) }
+            Button("Investments") { router.navigate(to: .investments) }
+            Button("\(vm.customer.name) Account") { router.navigate(to: [.investments, .investDetail(vm.customer.name)]) }
         }
         .navigationTitle("Financial Planning")
         .navigationBarTitleDisplayMode(.inline)
-        .navigationDestination(for: ContributionsModel.self) { contributions in
-            ContributionsView(amount: contributions.amount) {
-                router.configRoute(to: [InvestmentsModel()], refreshPath: true)
-            }
-        }
-        .navigationDestination(for: InvestmentsModel.self) { investments in
-            InvestmentsView(amount: investments.amount, name: vm.customer.name) {
-                router.configRoute(to: [vm.customer.contributions], refreshPath: true)
+        .navigationDestination(for: Router.Destination.self) { destination in
+            switch destination {
+            case .contributions:
+                ContributionsView()
+            case .investments:
+                InvestmentsView()
+            case .investDetail(let name):
+                InvestDetailView(name: name)
             }
         }
     }

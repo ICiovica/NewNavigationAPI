@@ -15,6 +15,7 @@ struct ContentView: View {
         NavigationStack(path: $router.path) {
             FinanceView()
         }
+        .fontWeight(.medium)
         .environmentObject(router)
         .environmentObject(vm)
     }

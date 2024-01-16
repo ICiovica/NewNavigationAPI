@@ -8,14 +8,16 @@
 import SwiftUI
 
 struct ContributionsView: View {
-    let amount: Int
-    let action: () -> Void
+    @EnvironmentObject private var router: Router
+    @EnvironmentObject private var vm: CustomerViewModel
     
     var body: some View {
-        VStack(spacing: 16) {
-            Text("Total contributions: \(amount.description)")
-            Button("Invest Now", action: action)
-                .buttonStyle(.borderedProminent)
+        List {
+            Section {
+                Button("Investments") { router.navigate(to: .investments, refreshPath: true) }
+            } header: {
+                Text("Total contributions: \(vm.customer.contributions.amount.description)")
+            }
         }
         .navigationTitle("Contributions")
         .navigationBarTitleDisplayMode(.inline)
@@ -23,5 +25,7 @@ struct ContributionsView: View {
 }
 
 #Preview {
-    ContributionsView(amount: 0) {}
+    ContributionsView()
+        .environmentObject(Router())
+        .environmentObject(CustomerViewModel())
 }

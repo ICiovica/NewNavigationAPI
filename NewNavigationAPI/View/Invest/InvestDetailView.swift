@@ -9,22 +9,24 @@ import SwiftUI
 
 struct InvestDetailView: View {
     @EnvironmentObject private var router: Router
-    let name: String
     @State private var isPresented = false
+    let name: String
     
     var body: some View {
-        Button("Present **\(name)** details") { isPresented.toggle() }
-            .buttonStyle(.borderedProminent)
-            .navigationTitle("User details")
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbar {
-                ToolbarItem(placement: .topBarTrailing) {
-                    Button("Dismiss", action: router.navigateToRoot)
-                }
+        List {
+            Button("\(name) Account Details") { isPresented.toggle() }
+        }
+        .navigationTitle("User details")
+        .navigationBarTitleDisplayMode(.inline)
+        .fullScreenCover(isPresented: $isPresented) {
+            InvestFullScreenCover()
+        }
+        .toolbar {
+            ToolbarItem(placement: .topBarTrailing) {
+                Button("Dismiss", action: router.navigateToRoot)
+                    .fontWeight(.regular)
             }
-            .fullScreenCover(isPresented: $isPresented) {
-                InvestFullScreenCover()
-            }
+        }
     }
 }
 
