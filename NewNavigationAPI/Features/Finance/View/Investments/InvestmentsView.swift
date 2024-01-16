@@ -20,13 +20,13 @@ struct InvestmentsView: View {
             }
             
             Section {
-                Button("Contributions") {  router.navigate(to: .contributions, refreshPath: true) }
+                Button("Switch to Contributions") {  router.navigate(to: .contributions, refreshPath: true) }
             } header: {
                 Text("Accounts")
             }
             
             Section {
-                Button("Account Name") { router.navigate(to: .accountDetails) }
+                Button("Account Details") { router.navigate(to: .accountDetails) }
             } header: {
                 Text("Settings")
             }

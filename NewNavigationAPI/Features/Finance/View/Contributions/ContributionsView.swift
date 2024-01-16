@@ -20,7 +20,7 @@ struct ContributionsView: View {
             }
             
             Section {
-                Button("Investments") { router.navigate(to: .investments, refreshPath: true) }
+                Button("Switch to Investments") { router.navigate(to: .investments, refreshPath: true) }
             } header: {
                 Text("Accounts")
             }
