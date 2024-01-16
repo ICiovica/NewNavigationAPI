@@ -7,29 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AC41C8852B55258C005E608F /* InvestmentsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC41C8842B55258C005E608F /* InvestmentsModel.swift */; };
-		AC41C8872B552597005E608F /* ContributionsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC41C8862B552597005E608F /* ContributionsModel.swift */; };
 		AC41C88B2B5529BA005E608F /* InvestDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC41C88A2B5529BA005E608F /* InvestDetailView.swift */; };
 		AC41C88D2B552C82005E608F /* InvestFullScreenCover.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC41C88C2B552C82005E608F /* InvestFullScreenCover.swift */; };
 		AC41C8902B5542BD005E608F /* CustomerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC41C88F2B5542BD005E608F /* CustomerViewModel.swift */; };
 		AC41C8922B5542E7005E608F /* CustomerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC41C8912B5542E7005E608F /* CustomerModel.swift */; };
+		ACC57EB32B56962A00D88B4B /* PurchaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC57EB22B56962A00D88B4B /* PurchaseView.swift */; };
 		ACCFBC432B542E1600FEDFB9 /* NewNavigationAPIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCFBC422B542E1600FEDFB9 /* NewNavigationAPIApp.swift */; };
 		ACCFBC452B542E1600FEDFB9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCFBC442B542E1600FEDFB9 /* ContentView.swift */; };
 		ACCFBC472B542E1A00FEDFB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACCFBC462B542E1A00FEDFB9 /* Assets.xcassets */; };
 		ACCFBC4A2B542E1A00FEDFB9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACCFBC492B542E1A00FEDFB9 /* Preview Assets.xcassets */; };
 		ACCFBC512B542F8800FEDFB9 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCFBC502B542F8800FEDFB9 /* Router.swift */; };
 		ACCFBC532B543D0700FEDFB9 /* InvestmentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCFBC522B543D0700FEDFB9 /* InvestmentsView.swift */; };
-		ACCFBC552B543D1600FEDFB9 /* ContributeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCFBC542B543D1600FEDFB9 /* ContributeView.swift */; };
+		ACCFBC552B543D1600FEDFB9 /* ContributionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCFBC542B543D1600FEDFB9 /* ContributionsView.swift */; };
 		ACCFBC572B543D3600FEDFB9 /* FinanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCFBC562B543D3600FEDFB9 /* FinanceView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		AC41C8842B55258C005E608F /* InvestmentsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestmentsModel.swift; sourceTree = "<group>"; };
-		AC41C8862B552597005E608F /* ContributionsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributionsModel.swift; sourceTree = "<group>"; };
 		AC41C88A2B5529BA005E608F /* InvestDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestDetailView.swift; sourceTree = "<group>"; };
 		AC41C88C2B552C82005E608F /* InvestFullScreenCover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestFullScreenCover.swift; sourceTree = "<group>"; };
 		AC41C88F2B5542BD005E608F /* CustomerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerViewModel.swift; sourceTree = "<group>"; };
 		AC41C8912B5542E7005E608F /* CustomerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerModel.swift; sourceTree = "<group>"; };
+		ACC57EB22B56962A00D88B4B /* PurchaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseView.swift; sourceTree = "<group>"; };
 		ACCFBC3F2B542E1600FEDFB9 /* NewNavigationAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewNavigationAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACCFBC422B542E1600FEDFB9 /* NewNavigationAPIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewNavigationAPIApp.swift; sourceTree = "<group>"; };
 		ACCFBC442B542E1600FEDFB9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -37,7 +35,7 @@
 		ACCFBC492B542E1A00FEDFB9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		ACCFBC502B542F8800FEDFB9 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		ACCFBC522B543D0700FEDFB9 /* InvestmentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestmentsView.swift; sourceTree = "<group>"; };
-		ACCFBC542B543D1600FEDFB9 /* ContributeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributeView.swift; sourceTree = "<group>"; };
+		ACCFBC542B543D1600FEDFB9 /* ContributionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributionsView.swift; sourceTree = "<group>"; };
 		ACCFBC562B543D3600FEDFB9 /* FinanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -55,8 +53,6 @@
 		AC41C8812B552534005E608F /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				AC41C8842B55258C005E608F /* InvestmentsModel.swift */,
-				AC41C8862B552597005E608F /* ContributionsModel.swift */,
 				AC41C8912B5542E7005E608F /* CustomerModel.swift */,
 			);
 			path = Model;
@@ -65,8 +61,9 @@
 		AC41C8822B552539005E608F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				AC41C8892B552907005E608F /* Contribute */,
-				AC41C8882B552901005E608F /* Invest */,
+				ACC57EB62B56996400D88B4B /* Purchase */,
+				AC41C8892B552907005E608F /* Contributions */,
+				AC41C8882B552901005E608F /* Investments */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -79,22 +76,22 @@
 			path = Navigation;
 			sourceTree = "<group>";
 		};
-		AC41C8882B552901005E608F /* Invest */ = {
+		AC41C8882B552901005E608F /* Investments */ = {
 			isa = PBXGroup;
 			children = (
 				ACCFBC522B543D0700FEDFB9 /* InvestmentsView.swift */,
 				AC41C88C2B552C82005E608F /* InvestFullScreenCover.swift */,
 				AC41C88A2B5529BA005E608F /* InvestDetailView.swift */,
 			);
-			path = Invest;
+			path = Investments;
 			sourceTree = "<group>";
 		};
-		AC41C8892B552907005E608F /* Contribute */ = {
+		AC41C8892B552907005E608F /* Contributions */ = {
 			isa = PBXGroup;
 			children = (
-				ACCFBC542B543D1600FEDFB9 /* ContributeView.swift */,
+				ACCFBC542B543D1600FEDFB9 /* ContributionsView.swift */,
 			);
-			path = Contribute;
+			path = Contributions;
 			sourceTree = "<group>";
 		};
 		AC41C88E2B554296005E608F /* ViewModel */ = {
@@ -103,6 +100,14 @@
 				AC41C88F2B5542BD005E608F /* CustomerViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		ACC57EB62B56996400D88B4B /* Purchase */ = {
+			isa = PBXGroup;
+			children = (
+				ACC57EB22B56962A00D88B4B /* PurchaseView.swift */,
+			);
+			path = Purchase;
 			sourceTree = "<group>";
 		};
 		ACCFBC362B542E1600FEDFB9 = {
@@ -218,11 +223,10 @@
 				AC41C88B2B5529BA005E608F /* InvestDetailView.swift in Sources */,
 				AC41C8922B5542E7005E608F /* CustomerModel.swift in Sources */,
 				AC41C88D2B552C82005E608F /* InvestFullScreenCover.swift in Sources */,
-				AC41C8872B552597005E608F /* ContributionsModel.swift in Sources */,
 				ACCFBC452B542E1600FEDFB9 /* ContentView.swift in Sources */,
 				ACCFBC572B543D3600FEDFB9 /* FinanceView.swift in Sources */,
-				AC41C8852B55258C005E608F /* InvestmentsModel.swift in Sources */,
-				ACCFBC552B543D1600FEDFB9 /* ContributeView.swift in Sources */,
+				ACC57EB32B56962A00D88B4B /* PurchaseView.swift in Sources */,
+				ACCFBC552B543D1600FEDFB9 /* ContributionsView.swift in Sources */,
 				AC41C8902B5542BD005E608F /* CustomerViewModel.swift in Sources */,
 				ACCFBC512B542F8800FEDFB9 /* Router.swift in Sources */,
 				ACCFBC432B542E1600FEDFB9 /* NewNavigationAPIApp.swift in Sources */,
@@ -285,7 +289,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -342,7 +346,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -368,6 +372,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -397,6 +402,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

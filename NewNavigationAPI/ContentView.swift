@@ -18,6 +18,9 @@ struct ContentView: View {
         .fontWeight(.medium)
         .environmentObject(router)
         .environmentObject(vm)
+        .onChange(of: router.path) { path in
+            dump(path)
+        }
     }
 }
 

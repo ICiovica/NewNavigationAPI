@@ -13,7 +13,8 @@ final class Router: ObservableObject {
     enum Destination: Hashable {
         case investments
         case contributions
-        case investDetail(String)
+        case accountDetails(String)
+        case purchase(PurchaseType)
     }
     
     func navigateBack() {

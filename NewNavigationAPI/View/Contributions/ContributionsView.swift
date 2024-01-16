@@ -14,10 +14,23 @@ struct ContributionsView: View {
     var body: some View {
         List {
             Section {
+                Button("Contribute Now") { router.navigate(to: .purchase(.contribute)) }
+            } header: {
+                Text("Total contributions: \(vm.customer.contributions)")
+            }
+            
+            Section {
                 Button("Investments") { router.navigate(to: .investments, refreshPath: true) }
             } header: {
-                Text("Total contributions: \(vm.customer.contributions.amount.description)")
+                Text("Accounts")
             }
+            
+            Section {
+                Button(vm.customer.name) { router.navigate(to: .accountDetails(vm.customer.name)) }
+            } header: {
+                Text("Details")
+            }
+            
         }
         .navigationTitle("Contributions")
         .navigationBarTitleDisplayMode(.inline)

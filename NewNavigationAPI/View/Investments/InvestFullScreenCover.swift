@@ -57,8 +57,8 @@ struct InvestFullScreenCover: View {
         VStack(alignment: .leading, spacing: 12) {
             Text("Name: \(vm.customer.name)")
             Text("Age: \(vm.customer.age)")
-            Text("Investments: \(vm.customer.investments.amount.description)")
-            Text("Contributions: \(vm.customer.contributions.amount.description)")
+            Text("Investments: \(vm.customer.investments)")
+            Text("Contributions: \(vm.customer.contributions)")
         }
     }
 }

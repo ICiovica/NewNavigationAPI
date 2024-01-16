@@ -14,12 +14,22 @@ struct InvestmentsView: View {
     var body: some View {
         List {
             Section {
-                Button("Contributions") {  router.navigate(to: .contributions, refreshPath: true) }
+                Button("Invest Now") { router.navigate(to: .purchase(.invest)) }
             } header: {
-                Text("Total investments: \(vm.customer.investments.amount.description)")
+                Text("Total investments: \(vm.customer.investments)")
             }
             
-            Button("\(vm.customer.name) Account") { router.navigate(to: .investDetail(vm.customer.name)) }
+            Section {
+                Button("Contributions") {  router.navigate(to: .contributions, refreshPath: true) }
+            } header: {
+                Text("Accounts")
+            }
+            
+            Section {
+                Button(vm.customer.name) { router.navigate(to: .accountDetails(vm.customer.name)) }
+            } header: {
+                Text("Details")
+            }
         }
         .navigationTitle("Investments")
         .navigationBarTitleDisplayMode(.inline)

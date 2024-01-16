@@ -13,9 +13,18 @@ struct FinanceView: View {
     
     var body: some View {
         List {
-            Button("Contributions") { router.navigate(to: .contributions) }
-            Button("Investments") { router.navigate(to: .investments) }
-            Button("\(vm.customer.name) Account") { router.navigate(to: [.investments, .investDetail(vm.customer.name)]) }
+            Section {
+                Button("Contributions") { router.navigate(to: .contributions) }
+                Button("Investments") { router.navigate(to: .investments) }
+            } header: {
+                Text("Accounts")
+            }
+            
+            Section {
+                Button(vm.customer.name) { router.navigate(to: [.investments, .accountDetails(vm.customer.name)]) }
+            } header: {
+                Text("Details")
+            }
         }
         .navigationTitle("Financial Planning")
         .navigationBarTitleDisplayMode(.inline)
@@ -25,8 +34,15 @@ struct FinanceView: View {
                 ContributionsView()
             case .investments:
                 InvestmentsView()
-            case .investDetail(let name):
-                InvestDetailView(name: name)
+            case .accountDetails(let name):
+                InvestDetailView(name: name) {
+                    router.navigateToRoot()
+                }
+            case .purchase(let type):
+                PurchaseView() { amount in
+                    vm.purchased(of: type, amount: amount)
+                    router.navigateBack()
+                }
             }
         }
     }

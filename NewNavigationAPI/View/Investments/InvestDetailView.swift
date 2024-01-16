@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct InvestDetailView: View {
-    @EnvironmentObject private var router: Router
     @State private var isPresented = false
     let name: String
+    let action: () -> Void
     
     var body: some View {
         List {
@@ -23,7 +23,7 @@ struct InvestDetailView: View {
         }
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
-                Button("Dismiss", action: router.navigateToRoot)
+                Button("Dismiss", action: action)
                     .fontWeight(.regular)
             }
         }
@@ -31,6 +31,5 @@ struct InvestDetailView: View {
 }
 
 #Preview {
-    InvestDetailView(name: "John")
-        .environmentObject(Router())
+    InvestDetailView(name: "John") {}
 }

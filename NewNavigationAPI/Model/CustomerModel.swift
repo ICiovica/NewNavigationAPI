@@ -7,9 +7,9 @@
 
 import Foundation
 
-struct CustomerModel: Hashable {
+struct CustomerModel {
     let name = "Ionut Ciovica"
     let age = 38
-    let investments = InvestmentsModel()
-    let contributions = ContributionsModel()
+    var investments = 50
+    var contributions = 100
 }
