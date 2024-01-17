@@ -40,7 +40,7 @@ struct ContributionsView: View {
     
     private var accountDetailsSection: some View {
         Section {
-            Button("Account Details") { router.navigate(to: [.accountDetails]) }
+            Button("Account Details") { router.navigate(to: [.accountDetails(isTapped: false)]) }
         } header: {
             Text("Settings")
         }

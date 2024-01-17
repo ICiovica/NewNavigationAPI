@@ -15,10 +15,10 @@ enum PurchaseType {
 final class Router: ObservableObject {
     @Published var path: [Destination] = []
     
-    enum Destination: Hashable {
+    enum Destination: Hashable, Equatable {
         case investments
         case contributions
-        case accountDetails
+        case accountDetails(isTapped: Bool)
         case purchase(PurchaseType)
     }
     

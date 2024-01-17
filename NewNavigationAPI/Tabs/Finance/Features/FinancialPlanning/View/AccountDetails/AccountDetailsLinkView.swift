@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct AccountDetailsLinkView: View {
-    @State private var isPresented = false
+    @State private var isPresented: Bool = false
     let name: String
+    let isTapped: Bool
     
     var body: some View {
         List {
@@ -20,9 +21,12 @@ struct AccountDetailsLinkView: View {
         .fullScreenCover(isPresented: $isPresented) {
             AccountDetailsView()
         }
+        .onAppear {
+            isPresented = isTapped
+        }
     }
 }
 
 #Preview {
-    AccountDetailsLinkView(name: "John")
+    AccountDetailsLinkView(name: "John", isTapped: false)
 }

@@ -32,8 +32,8 @@ struct FinancialPlanningView: View {
                     ContributionsView()
                 case .investments:
                     InvestmentsView()
-                case .accountDetails:
-                    AccountDetailsLinkView(name: vm.customer.name)
+                case .accountDetails(let isTapped):
+                    AccountDetailsLinkView(name: vm.customer.name, isTapped: isTapped)
                 case .purchase(let type):
                     PurchaseView() { amount in
                         vm.purchase(of: type, with: amount)
@@ -60,7 +60,7 @@ struct FinancialPlanningView: View {
     
     private var accountDetailsSection: some View {
         Section {
-            Button("Account Details") { router.navigate(to: [.investments, .accountDetails]) }
+            Button("Account Details") { router.navigate(to: [.investments, .accountDetails(isTapped: true)]) }
         } header: {
             Text("Settings")
         }
