@@ -10,7 +10,6 @@ import SwiftUI
 struct AccountDetailsLinkView: View {
     @State private var isPresented = false
     let name: String
-    let action: () -> Void
     
     var body: some View {
         List {
@@ -25,5 +24,5 @@ struct AccountDetailsLinkView: View {
 }
 
 #Preview {
-    AccountDetailsLinkView(name: "John") {}
+    AccountDetailsLinkView(name: "John")
 }
