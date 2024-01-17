@@ -107,20 +107,20 @@
 			path = AccountDetails;
 			sourceTree = "<group>";
 		};
-		AC4AB3192B57036E00BB61B8 /* Features */ = {
+		AC4AB3192B57036E00BB61B8 /* Tabs */ = {
 			isa = PBXGroup;
 			children = (
 				AC4AB31C2B570A0F00BB61B8 /* Dashboard */,
 				AC4AB31A2B57037600BB61B8 /* Finance */,
 			);
-			path = Features;
+			path = Tabs;
 			sourceTree = "<group>";
 		};
 		AC4AB31A2B57037600BB61B8 /* Finance */ = {
 			isa = PBXGroup;
 			children = (
 				AC4AB3232B57137000BB61B8 /* FinanceView.swift */,
-				AC4AB3252B57AF3F00BB61B8 /* Routes */,
+				AC4AB3252B57AF3F00BB61B8 /* Features */,
 			);
 			path = Finance;
 			sourceTree = "<group>";
@@ -141,12 +141,12 @@
 			path = Dashboard;
 			sourceTree = "<group>";
 		};
-		AC4AB3252B57AF3F00BB61B8 /* Routes */ = {
+		AC4AB3252B57AF3F00BB61B8 /* Features */ = {
 			isa = PBXGroup;
 			children = (
 				AC4AB3262B57AF4600BB61B8 /* FinancialPlanning */,
 			);
-			path = Routes;
+			path = Features;
 			sourceTree = "<group>";
 		};
 		AC4AB3262B57AF4600BB61B8 /* FinancialPlanning */ = {
@@ -189,7 +189,7 @@
 			children = (
 				ACCFBC422B542E1600FEDFB9 /* NewNavigationAPIApp.swift */,
 				ACCFBC442B542E1600FEDFB9 /* TabsView.swift */,
-				AC4AB3192B57036E00BB61B8 /* Features */,
+				AC4AB3192B57036E00BB61B8 /* Tabs */,
 				ACCFBC462B542E1A00FEDFB9 /* Assets.xcassets */,
 				ACCFBC482B542E1A00FEDFB9 /* Preview Content */,
 			);
