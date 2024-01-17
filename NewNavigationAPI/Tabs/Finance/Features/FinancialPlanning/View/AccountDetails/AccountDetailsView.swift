@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct AccountDetailsView: View {
+    @State private var sheetIsPresented = false
+    @State private var alertIsPresented = false
     @Environment(\.dismiss) var dismiss
     @EnvironmentObject private var router: Router
     let customer: CustomerModel
@@ -16,6 +18,8 @@ struct AccountDetailsView: View {
         NavigationStack {
             List {
                 accountDetailsSection
+                Button("Let's see if I can open a sheet ...") { sheetIsPresented.toggle() }
+                Button("What about an alert?") { alertIsPresented.toggle() }
             }
             .navigationTitle("Account Details")
             .navigationBarTitleDisplayMode(.inline)
@@ -24,6 +28,13 @@ struct AccountDetailsView: View {
                     Button("Dismiss") { dismiss() }
                         .fontWeight(.regular)
                 }
+            }
+            .sheet(isPresented: $sheetIsPresented) {
+                Text("Yes, I can 😎")
+                    .presentationDetents([.height(80)])
+            }
+            .alert("Of course I can 😎", isPresented: $alertIsPresented) {
+                Button("Great!", role: .cancel) { }
             }
         }
     }
@@ -40,7 +51,7 @@ struct AccountDetailsView: View {
     private var accountDetailsSection: some View {
         Section {
             detailsVw
-            Button("Financial Planning", action: router.navigateToRoot)
+            Button("Financial Planning") { router.navigateToRoot() }
         } header: {
             Text("Account Details")
         }
