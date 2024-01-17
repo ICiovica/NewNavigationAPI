@@ -10,7 +10,7 @@ import SwiftUI
 struct AccountDetailsView: View {
     @Environment(\.dismiss) var dismiss
     @EnvironmentObject private var router: Router
-    @EnvironmentObject private var vm: CustomerViewModel
+    let customer: CustomerModel
     
     var body: some View {
         NavigationStack {
@@ -30,10 +30,10 @@ struct AccountDetailsView: View {
     
     private var detailsVw: some View {
         VStack(alignment: .leading, spacing: 12) {
-            Text("Name: \(vm.customer.name)")
-            Text("Age: \(vm.customer.age)")
-            Text("Investments: \(vm.customer.investments)")
-            Text("Contributions: \(vm.customer.contributions)")
+            Text("Name: \(customer.name)")
+            Text("Age: \(customer.age)")
+            Text("Investments: \(customer.investments)")
+            Text("Contributions: \(customer.contributions)")
         }
     }
     
@@ -48,7 +48,6 @@ struct AccountDetailsView: View {
 }
 
 #Preview {
-    AccountDetailsView()
+    AccountDetailsView(customer: .init())
         .environmentObject(Router())
-        .environmentObject(CustomerViewModel())
 }

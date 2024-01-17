@@ -9,17 +9,17 @@ import SwiftUI
 
 struct AccountDetailsLinkView: View {
     @State private var isPresented: Bool = false
-    let name: String
+    let customer: CustomerModel
     let isTapped: Bool
     
     var body: some View {
         List {
-            Button(name) { isPresented.toggle() }
+            Button(customer.name) { isPresented.toggle() }
         }
         .navigationTitle("Account Details")
         .navigationBarTitleDisplayMode(.inline)
         .fullScreenCover(isPresented: $isPresented) {
-            AccountDetailsView()
+            AccountDetailsView(customer: customer)
         }
         .onAppear {
             isPresented = isTapped
@@ -28,5 +28,5 @@ struct AccountDetailsLinkView: View {
 }
 
 #Preview {
-    AccountDetailsLinkView(name: "John", isTapped: false)
+    AccountDetailsLinkView(customer: .init(), isTapped: false)
 }

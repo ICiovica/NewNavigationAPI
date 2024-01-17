@@ -33,7 +33,7 @@ struct FinancialPlanningView: View {
                 case .investments:
                     InvestmentsView()
                 case .accountDetails(let isTapped):
-                    AccountDetailsLinkView(name: vm.customer.name, isTapped: isTapped)
+                    AccountDetailsLinkView(customer: vm.customer, isTapped: isTapped)
                 case .purchase(let type):
                     PurchaseView() { amount in
                         vm.purchase(of: type, with: amount)

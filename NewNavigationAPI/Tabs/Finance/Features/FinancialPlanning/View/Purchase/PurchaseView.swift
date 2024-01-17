@@ -9,7 +9,6 @@ import SwiftUI
 
 struct PurchaseView: View {
     @State private var amount: Int = 0
-    
     private var amountIsValid: Bool { amount > 0 }
     
     let action: (Int) -> Void

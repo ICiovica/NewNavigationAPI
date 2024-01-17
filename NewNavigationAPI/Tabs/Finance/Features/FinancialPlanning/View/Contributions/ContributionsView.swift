@@ -16,7 +16,6 @@ struct ContributionsView: View {
             contributionsSection
             accountsSection
             accountDetailsSection
-            
         }
         .navigationTitle("Contributions")
         .navigationBarTitleDisplayMode(.inline)
