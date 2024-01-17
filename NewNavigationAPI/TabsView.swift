@@ -22,7 +22,7 @@ struct TabsView: View {
                     Label("Dashboard", systemImage: "d.square.fill")
                 }
                 .tag(Tab.dashboard)
-            FinanceEntryView()
+            FinanceView()
                 .tabItem {
                     Label("Finance", systemImage: "f.square.fill")
                 }

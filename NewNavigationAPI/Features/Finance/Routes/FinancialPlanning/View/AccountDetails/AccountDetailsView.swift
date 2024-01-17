@@ -15,12 +15,7 @@ struct AccountDetailsView: View {
     var body: some View {
         NavigationStack {
             List {
-                Section {
-                    detailsVw
-                    Button("Financial Planning", action: router.navigateToRoot)
-                } header: {
-                    Text("Account Details")
-                }
+                accountDetailsSection
             }
             .navigationTitle("Account Details")
             .navigationBarTitleDisplayMode(.inline)
@@ -39,6 +34,15 @@ struct AccountDetailsView: View {
             Text("Age: \(vm.customer.age)")
             Text("Investments: \(vm.customer.investments)")
             Text("Contributions: \(vm.customer.contributions)")
+        }
+    }
+    
+    private var accountDetailsSection: some View {
+        Section {
+            detailsVw
+            Button("Financial Planning", action: router.navigateToRoot)
+        } header: {
+            Text("Account Details")
         }
     }
 }

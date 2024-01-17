@@ -1,5 +1,5 @@
 //
-//  FinanceView.swift
+//  FinancialPlanningView.swift
 //  NewNavigationAPI
 //
 //  Created by IonutCiovica on 14/01/2024.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct FinanceView: View {
+struct FinancialPlanningView: View {
     @Environment(\.dismiss) var dismiss
     @StateObject private var router = Router()
     @StateObject private var vm = CustomerViewModel()
@@ -15,18 +15,8 @@ struct FinanceView: View {
     var body: some View {
         NavigationStack(path: $router.path) {
             List {
-                Section {
-                    Button("Contributions") { router.navigate(to: .contributions) }
-                    Button("Investments") { router.navigate(to: .investments) }
-                } header: {
-                    Text("Accounts")
-                }
-                
-                Section {
-                    Button("Account Details") { router.navigate(to: [.investments, .accountDetails]) }
-                } header: {
-                    Text("Settings")
-                }
+                accountsSection
+                accountDetailsSection
             }
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
@@ -58,10 +48,27 @@ struct FinanceView: View {
         .environmentObject(router)
         .environmentObject(vm)
     }
+    
+    private var accountsSection: some View {
+        Section {
+            Button("Contributions") { router.navigate(to: [.contributions]) }
+            Button("Investments") { router.navigate(to: [.investments]) }
+        } header: {
+            Text("Accounts")
+        }
+    }
+    
+    private var accountDetailsSection: some View {
+        Section {
+            Button("Account Details") { router.navigate(to: [.investments, .accountDetails]) }
+        } header: {
+            Text("Settings")
+        }
+    }
 }
 
 #Preview {
-    FinanceView()
+    FinancialPlanningView()
         .environmentObject(Router())
         .environmentObject(CustomerViewModel())
 }

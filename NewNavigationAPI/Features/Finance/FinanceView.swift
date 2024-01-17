@@ -1,5 +1,5 @@
 //
-//  FinanceEntryView.swift
+//  FinanceView.swift
 //  NewNavigationAPI
 //
 //  Created by IonutCiovica on 16/01/2024.
@@ -7,26 +7,30 @@
 
 import SwiftUI
 
-struct FinanceEntryView: View {
+struct FinanceView: View {
     @State private var isPresented = false
     var body: some View {
         NavigationStack {
             List {
-                Button {
-                    isPresented.toggle()
-                } label: {
-                    Text("Financial Planning")
-                }
+                financialPlanningBtn
             }
             .navigationTitle("Finance")
             .navigationBarTitleDisplayMode(.inline)
         }
         .fullScreenCover(isPresented: $isPresented) {
-            FinanceView()
+            FinancialPlanningView()
+        }
+    }
+    
+    private var financialPlanningBtn: some View {
+        Button {
+            isPresented.toggle()
+        } label: {
+            Text("Financial Planning")
         }
     }
 }
 
 #Preview {
-    FinanceEntryView()
+    FinanceView()
 }

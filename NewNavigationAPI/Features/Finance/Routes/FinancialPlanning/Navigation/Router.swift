@@ -34,11 +34,6 @@ final class Router: ObservableObject {
         if refreshPath { path = [] }
         destinations.forEach { path.append($0) }
     }
-    
-    func navigate(to destination: Destination, refreshPath: Bool = false) {
-        if refreshPath { path = [] }
-        path.append(destination)
-    }
 }
 
 

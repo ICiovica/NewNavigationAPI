@@ -12,7 +12,7 @@
 		AC41C8902B5542BD005E608F /* CustomerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC41C88F2B5542BD005E608F /* CustomerViewModel.swift */; };
 		AC41C8922B5542E7005E608F /* CustomerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC41C8912B5542E7005E608F /* CustomerModel.swift */; };
 		AC4AB3222B570A5400BB61B8 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4AB3212B570A5400BB61B8 /* DashboardView.swift */; };
-		AC4AB3242B57137000BB61B8 /* FinanceEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4AB3232B57137000BB61B8 /* FinanceEntryView.swift */; };
+		AC4AB3242B57137000BB61B8 /* FinanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4AB3232B57137000BB61B8 /* FinanceView.swift */; };
 		ACC57EB32B56962A00D88B4B /* PurchaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC57EB22B56962A00D88B4B /* PurchaseView.swift */; };
 		ACCFBC432B542E1600FEDFB9 /* NewNavigationAPIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCFBC422B542E1600FEDFB9 /* NewNavigationAPIApp.swift */; };
 		ACCFBC452B542E1600FEDFB9 /* TabsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCFBC442B542E1600FEDFB9 /* TabsView.swift */; };
@@ -21,7 +21,7 @@
 		ACCFBC512B542F8800FEDFB9 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCFBC502B542F8800FEDFB9 /* Router.swift */; };
 		ACCFBC532B543D0700FEDFB9 /* InvestmentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCFBC522B543D0700FEDFB9 /* InvestmentsView.swift */; };
 		ACCFBC552B543D1600FEDFB9 /* ContributionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCFBC542B543D1600FEDFB9 /* ContributionsView.swift */; };
-		ACCFBC572B543D3600FEDFB9 /* FinanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCFBC562B543D3600FEDFB9 /* FinanceView.swift */; };
+		ACCFBC572B543D3600FEDFB9 /* FinancialPlanningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCFBC562B543D3600FEDFB9 /* FinancialPlanningView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,7 +30,7 @@
 		AC41C88F2B5542BD005E608F /* CustomerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerViewModel.swift; sourceTree = "<group>"; };
 		AC41C8912B5542E7005E608F /* CustomerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerModel.swift; sourceTree = "<group>"; };
 		AC4AB3212B570A5400BB61B8 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
-		AC4AB3232B57137000BB61B8 /* FinanceEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceEntryView.swift; sourceTree = "<group>"; };
+		AC4AB3232B57137000BB61B8 /* FinanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceView.swift; sourceTree = "<group>"; };
 		ACC57EB22B56962A00D88B4B /* PurchaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseView.swift; sourceTree = "<group>"; };
 		ACCFBC3F2B542E1600FEDFB9 /* NewNavigationAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewNavigationAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACCFBC422B542E1600FEDFB9 /* NewNavigationAPIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewNavigationAPIApp.swift; sourceTree = "<group>"; };
@@ -40,7 +40,7 @@
 		ACCFBC502B542F8800FEDFB9 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		ACCFBC522B543D0700FEDFB9 /* InvestmentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestmentsView.swift; sourceTree = "<group>"; };
 		ACCFBC542B543D1600FEDFB9 /* ContributionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributionsView.swift; sourceTree = "<group>"; };
-		ACCFBC562B543D3600FEDFB9 /* FinanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceView.swift; sourceTree = "<group>"; };
+		ACCFBC562B543D3600FEDFB9 /* FinancialPlanningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinancialPlanningView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,8 +65,7 @@
 		AC41C8822B552539005E608F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				AC4AB3232B57137000BB61B8 /* FinanceEntryView.swift */,
-				ACCFBC562B543D3600FEDFB9 /* FinanceView.swift */,
+				ACCFBC562B543D3600FEDFB9 /* FinancialPlanningView.swift */,
 				AC4AB3182B56BB4000BB61B8 /* AccountDetails */,
 				ACC57EB62B56996400D88B4B /* Purchase */,
 				AC41C8892B552907005E608F /* Contributions */,
@@ -120,10 +119,8 @@
 		AC4AB31A2B57037600BB61B8 /* Finance */ = {
 			isa = PBXGroup;
 			children = (
-				AC41C8812B552534005E608F /* Model */,
-				AC41C8822B552539005E608F /* View */,
-				AC41C88E2B554296005E608F /* ViewModel */,
-				AC4AB31B2B57096400BB61B8 /* Navigation */,
+				AC4AB3232B57137000BB61B8 /* FinanceView.swift */,
+				AC4AB3252B57AF3F00BB61B8 /* Routes */,
 			);
 			path = Finance;
 			sourceTree = "<group>";
@@ -139,17 +136,28 @@
 		AC4AB31C2B570A0F00BB61B8 /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
-				AC4AB31E2B570A3200BB61B8 /* View */,
+				AC4AB3212B570A5400BB61B8 /* DashboardView.swift */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
 		};
-		AC4AB31E2B570A3200BB61B8 /* View */ = {
+		AC4AB3252B57AF3F00BB61B8 /* Routes */ = {
 			isa = PBXGroup;
 			children = (
-				AC4AB3212B570A5400BB61B8 /* DashboardView.swift */,
+				AC4AB3262B57AF4600BB61B8 /* FinancialPlanning */,
 			);
-			path = View;
+			path = Routes;
+			sourceTree = "<group>";
+		};
+		AC4AB3262B57AF4600BB61B8 /* FinancialPlanning */ = {
+			isa = PBXGroup;
+			children = (
+				AC41C8812B552534005E608F /* Model */,
+				AC41C8822B552539005E608F /* View */,
+				AC41C88E2B554296005E608F /* ViewModel */,
+				AC4AB31B2B57096400BB61B8 /* Navigation */,
+			);
+			path = FinancialPlanning;
 			sourceTree = "<group>";
 		};
 		ACC57EB62B56996400D88B4B /* Purchase */ = {
@@ -269,10 +277,10 @@
 				AC41C88B2B5529BA005E608F /* AccountDetailsLinkView.swift in Sources */,
 				AC4AB3222B570A5400BB61B8 /* DashboardView.swift in Sources */,
 				AC41C8922B5542E7005E608F /* CustomerModel.swift in Sources */,
-				AC4AB3242B57137000BB61B8 /* FinanceEntryView.swift in Sources */,
+				AC4AB3242B57137000BB61B8 /* FinanceView.swift in Sources */,
 				AC41C88D2B552C82005E608F /* AccountDetailsView.swift in Sources */,
 				ACCFBC452B542E1600FEDFB9 /* TabsView.swift in Sources */,
-				ACCFBC572B543D3600FEDFB9 /* FinanceView.swift in Sources */,
+				ACCFBC572B543D3600FEDFB9 /* FinancialPlanningView.swift in Sources */,
 				ACC57EB32B56962A00D88B4B /* PurchaseView.swift in Sources */,
 				ACCFBC552B543D1600FEDFB9 /* ContributionsView.swift in Sources */,
 				AC41C8902B5542BD005E608F /* CustomerViewModel.swift in Sources */,
